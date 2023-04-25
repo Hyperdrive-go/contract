@@ -1310,16 +1310,9 @@ abstract contract ReentrancyGuard {
 }
 
 
-// File Contracts/Exchange.sol
+// File Contracts/Hyperdrive.sol
 
 pragma solidity ^0.8.0;
-
-
-
-
-
-
-
 
 interface IRoyaltyRegistry {
     function addRegistrant(address registrant) external;
@@ -1348,7 +1341,7 @@ interface ICancellationRegistry {
 }
 
 
-contract ExchangeV3 is Ownable, Pausable, ReentrancyGuard {
+contract Hyperdrive is Ownable, Pausable, ReentrancyGuard {
     using ERC165Checker for address;
 
     bytes4 private InterfaceId_ERC721 = 0x80ac58cd;  // The ERC-165 identifier for 721
